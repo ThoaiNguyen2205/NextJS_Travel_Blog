@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { arrTravelList } from "../../../public/assets/data/data";
 export default function Destinations() {
   return (
@@ -13,9 +14,9 @@ export default function Destinations() {
                 <h5 className="text-primary my-4">{`${dest.id}. ${dest.shortdesc}`}</h5>
               </Link>
               <div className="destination__list-img text-center">
-                <img src={dest.image[0]} alt="" />
-                <img src={dest.image[1]} alt="" />
-                <img src={dest.image[2]} alt="" />
+                <Image src={dest.image[0]} width={800} height={500} />
+                <Image src={dest.image[1]} width={800} height={500} />
+                <Image src={dest.image[2]} width={800} height={500} />
               </div>
             </div>
           );

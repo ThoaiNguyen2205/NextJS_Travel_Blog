@@ -147,7 +147,7 @@ a {
 }
 
 .category__item-img img {
-  width: 100%;
+  width: 800px;
   height: 250px;
   object-fit: fill;
 }
@@ -383,6 +383,7 @@ a {
 }
 
 .destination__list-img img {
-  width: 70%;
+  width: 900px;
+  height: 600px;
   margin: 30px 0;
 }

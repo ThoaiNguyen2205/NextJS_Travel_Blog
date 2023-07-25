@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { arrTravelList } from "../../../../public/assets/data/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -15,11 +16,23 @@ export default function DetailSlug({ params }) {
           {placeDetail.shortdesc}
         </h2>
         <div className="detail__title-img mb-5 text-center">
-          <img src={placeDetail.image[0]} alt="" className="w-75" />
+          <Image
+            src={placeDetail.image[0]}
+            alt=""
+            // className="w-75"
+            width={800}
+            height={500}
+          />
         </div>
         <div className="detail__item row mb-5 pt-5">
           <div className="detail__item-img col-5">
-            <img src={placeDetail.image[1]} alt="" className="w-100" />
+            <Image
+              src={placeDetail.image[1]}
+              alt=""
+              className="w-100"
+              width={675}
+              height={338}
+            />
           </div>
           <div className="detail__item-info col-7 ps-5">
             <p className="detail__item-desc">{placeDetail.description}</p>
@@ -30,7 +43,13 @@ export default function DetailSlug({ params }) {
             <p className="detail__item-desc">{placeDetail.description}</p>
           </div>
           <div className="detail__item-img col-5">
-            <img src={placeDetail.image[2]} alt="" className="w-100" />
+            <Image
+              src={placeDetail.image[2]}
+              alt=""
+              className="w-100"
+              width={675}
+              height={338}
+            />
           </div>
         </div>
       </div>
@@ -42,7 +61,12 @@ export default function DetailSlug({ params }) {
               <div className="related__list-item col-lg-4 col-md-6 col-12 p-5">
                 <div className="related__item">
                   <div className="related__item-img">
-                    <img src={relatePlace.image} alt="" />
+                    <Image
+                      src={relatePlace.image}
+                      alt=""
+                      width={675}
+                      height={338}
+                    />
                   </div>
                   <div className="related__item-info p-3">
                     <Link href={`/details/${relatePlace.name}`}>
