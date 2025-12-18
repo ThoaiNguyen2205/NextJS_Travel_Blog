@@ -24,6 +24,12 @@ export default function Home() {
                         width={675}
                         height={338}
                       />
+                      <image
+                        src={place.image[0]}
+                        alt="img"
+                        width={675}
+                        height={338}
+                      />
                       <div className="category__item-title ps-3">
                         <h3>{place.name}</h3>
                         <p className="text-white">{place.shortdesc}</p>
