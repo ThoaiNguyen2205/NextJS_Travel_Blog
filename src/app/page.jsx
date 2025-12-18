@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import styles from "./page.module.css";
 import { arrTravelList } from "../../public/assets/data/data";
 export default function Home() {
   return (
@@ -18,7 +16,7 @@ export default function Home() {
                 <Link href={`/details/${place.name}`}>
                   <div className="category__list-item card">
                     <div className="category__item-img">
-                      <Image
+                      <img
                         src={place.image[0]}
                         alt="img"
                         width={675}
